@@ -22,6 +22,9 @@ function showInputField(priority) {
     // Append input and submit button to the container
     inputContainer.appendChild(inputField);
     inputContainer.appendChild(submitButton);
+
+    // Focus on the input field for easier typing
+    inputField.focus();
 }
 
 // Function to add task
