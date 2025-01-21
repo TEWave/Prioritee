@@ -1,7 +1,31 @@
-// Function to add a task
-function addTask(priority) {
-    const taskText = prompt('Enter your task:');
+// Function to show input field for task
+function showInputField(priority) {
+    const inputContainer = document.getElementById(`${priority}-input-container`);
     
+    // Ensure there's no existing input field or submit button
+    inputContainer.innerHTML = '';
+
+    // Create input field for new task
+    const inputField = document.createElement('input');
+    inputField.type = 'text';
+    inputField.placeholder = 'Enter your task...';
+
+    // Create submit button
+    const submitButton = document.createElement('button');
+    submitButton.textContent = 'Add';
+    submitButton.classList.add('submit-task');
+    submitButton.onclick = function() {
+        addTask(priority, inputField.value);
+        inputContainer.innerHTML = ''; // Clear input field after task is added
+    };
+
+    // Append input and submit button to the container
+    inputContainer.appendChild(inputField);
+    inputContainer.appendChild(submitButton);
+}
+
+// Function to add task
+function addTask(priority, taskText) {
     if (taskText && taskText.trim() !== '') {
         // Create the task element (li)
         const task = document.createElement('li');
