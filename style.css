@@ -104,6 +104,9 @@ input[type="text"] {
     background: transparent;
     font-size: 16px;
     flex-grow: 1;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 8px;
 }
 
 input[type="text"]:focus {
@@ -127,4 +130,19 @@ li[draggable="true"] {
 
 li[draggable="true"]:active {
     cursor: grabbing;
+}
+
+.add-task-container {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+button.submit-task {
+    margin-left: 10px;
+    background-color: #2196F3;
+    border-radius: 8px;
 }
