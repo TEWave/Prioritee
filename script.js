@@ -1,27 +1,31 @@
 // Function to add a task
 function addTask(priority) {
     const taskText = prompt('Enter your task:');
-    if (taskText) {
+    
+    if (taskText && taskText.trim() !== '') {
+        // Create the task element (li)
         const task = document.createElement('li');
         task.setAttribute('draggable', 'true');
         task.classList.add('task-item');
         
-        // Checkbox
+        // Create the checkbox
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
         checkbox.addEventListener('change', function () {
             task.style.textDecoration = checkbox.checked ? 'line-through' : 'none';
         });
         
-        // Task description
+        // Create the task description
         const taskDesc = document.createElement('input');
         taskDesc.type = 'text';
         taskDesc.value = taskText;
         taskDesc.disabled = true;
         
-        // Append to the corresponding priority list
+        // Append the checkbox and description to the task
         task.appendChild(checkbox);
         task.appendChild(taskDesc);
+        
+        // Append the task to the appropriate priority list
         document.getElementById(`${priority}-list`).appendChild(task);
 
         // Enable Drag-and-Drop functionality
@@ -30,6 +34,8 @@ function addTask(priority) {
         task.addEventListener('drop', drop);
         task.addEventListener('dragenter', dragEnter);
         task.addEventListener('dragleave', dragLeave);
+    } else {
+        alert("Please enter a valid task.");
     }
 }
 
