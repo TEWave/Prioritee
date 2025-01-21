@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="priority-columns">
+            <div class="column high-priority" id="high-priority">
+                <h2>High Priority</h2>
+                <ul id="high-list"></ul>
+                <button class="add-task" onclick="addTask('high-priority')">Add Task</button>
+            </div>
+            <div class="column medium-priority" id="medium-priority">
+                <h2>Medium Priority</h2>
+                <ul id="medium-list"></ul>
+                <button class="add-task" onclick="addTask('medium-priority')">Add Task</button>
+            </div>
+            <div class="column low-priority" id="low-priority">
+                <h2>Low Priority</h2>
+                <ul id="low-list"></ul>
+                <button class="add-task" onclick="addTask('low-priority')">Add Task</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
