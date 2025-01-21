@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #4a4a4a;
+}
+
+.priority-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.column {
+    width: 30%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.high-priority {
+    background-color: #ffe6e6;
+}
+
+.medium-priority {
+    background-color: #e6f7ff;
+}
+
+.low-priority {
+    background-color: #f0e6ff;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #4a4a4a;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+li {
+    background-color: #f4f4f4;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+li:hover {
+    background-color: #e0e0e0;
+}
+
+button.add-task {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.add-task:hover {
+    background-color: #45a049;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+input[type="text"], input[type="checkbox"] {
+    border-radius: 8px;
+    padding: 5px;
+}
+
+/* Drag-and-Drop Styles */
+.column ul {
+    display: flex;
+    flex-direction: column;
+}
+
+li[draggable="true"] {
+    cursor: grab;
+}
+
+li[draggable="true"]:active {
+    cursor: grabbing;
+}
