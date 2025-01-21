@@ -14,17 +14,26 @@
             <div class="column high-priority" id="high-priority">
                 <h2>High Priority</h2>
                 <ul id="high-list"></ul>
-                <button class="add-task" onclick="addTask('high-priority')">Add Task</button>
+                <div class="add-task-container">
+                    <button class="add-task" onclick="showInputField('high-priority')">Add Task</button>
+                    <div id="high-input-container"></div>
+                </div>
             </div>
             <div class="column medium-priority" id="medium-priority">
                 <h2>Medium Priority</h2>
                 <ul id="medium-list"></ul>
-                <button class="add-task" onclick="addTask('medium-priority')">Add Task</button>
+                <div class="add-task-container">
+                    <button class="add-task" onclick="showInputField('medium-priority')">Add Task</button>
+                    <div id="medium-input-container"></div>
+                </div>
             </div>
             <div class="column low-priority" id="low-priority">
                 <h2>Low Priority</h2>
                 <ul id="low-list"></ul>
-                <button class="add-task" onclick="addTask('low-priority')">Add Task</button>
+                <div class="add-task-container">
+                    <button class="add-task" onclick="showInputField('low-priority')">Add Task</button>
+                    <div id="low-input-container"></div>
+                </div>
             </div>
         </div>
     </div>
